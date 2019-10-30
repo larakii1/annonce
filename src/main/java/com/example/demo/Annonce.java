@@ -1,15 +1,16 @@
 package com.example.demo;
 
 public class Annonce {
-	int numeroAnnonce;
+	int refAnnonce;
 	String annonceTitle; 
 	String categorie ;
 	
-	public int getNumeroAnnonce() {
-		return numeroAnnonce;
+
+	public int getRefAnnonce() {
+		return refAnnonce;
 	}
-	public void setNumeroAnnonce(int numeroAnnonce) {
-		this.numeroAnnonce = numeroAnnonce;
+	public void setRefAnnonce(int refAnnonce) {
+		this.refAnnonce = refAnnonce;
 	}
 	public String getAnnonceTitle() {
 		return annonceTitle;
