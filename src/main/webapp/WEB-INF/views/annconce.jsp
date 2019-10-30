@@ -14,7 +14,7 @@
 
     <meta charset="UTF-8">
 
-    <title>Hello</title>
+    <title>ceci est un test </title>
 
 </head>
 
@@ -22,23 +22,22 @@
 
     <form action="/albums" method="post">
 
-    Artiste:
-
+   
     <input type="text" name="artist" placeholder="Choisissez un artiste" />
 
     <input type="submit" value="ok" />
 
     </form>
 
-    <h2 class="hello-title">Nombre albums:  ${albums.size()}</h2>
+    <h2 class="hello-title"></h2>
 
     
 
     <ul>
 
-    <c:forEach items="${ albums }" var="album">       
+    <c:forEach items="" var="album">       
 
-        <li><c:out value="${ album }" /></p>
+        <li><c:out value="" /></p>
 
     </c:forEach>
 
