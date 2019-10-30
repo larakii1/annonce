@@ -20,10 +20,11 @@
 
 <body>
 
+
     <form action="/albums" method="post">
 
    
-    <input type="text" name="artist" placeholder="Choisissez un artiste" />
+    <input type="text" name="artist" placeholder="j'adore la vie " />
 
     <input type="submit" value="ok" />
 
@@ -43,10 +44,9 @@
 
     </ul>
 
- 
+<p> " ok je comprend le francey "</p>
 
-    
-
+<p> " llololo"</p>
     <script src="/js/main.js"></script>
 
 </body>
