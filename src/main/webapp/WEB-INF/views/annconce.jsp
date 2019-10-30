@@ -21,32 +21,31 @@
 <body>
 
 
-    <form action="/albums" method="post">
+     <form action="/annonce" method="get">
 
-   
-    <input type="text" name="artist" placeholder="j'adore la vie " />
+    Annonce:
+
+    <input type="text" name="artist" placeholder="Choisissez un artiste" />
 
     <input type="submit" value="ok" />
 
     </form>
 
-    <h2 class="hello-title"></h2>
 
-    
+    ${prenom }
 
     <ul>
 
-    <c:forEach items="" var="album">       
+    <c:forEach items="${ annonce}" var="annonce">       
 
-        <li><c:out value="" /></p>
+        <li><c:out value="${ annonce}" /></p>
 
     </c:forEach>
 
+
     </ul>
 
-<p> " ok je comprend le francey "</p>
-
-<p> " llololo"</p>
+ 
     <script src="/js/main.js"></script>
 
 </body>
