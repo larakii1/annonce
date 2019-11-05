@@ -21,7 +21,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class AnnonceController {
 @Autowired
 AnnonceService annonceservice;
-
+@Autowired
+CategorieService categorieservice;
 @GetMapping(value="/ok")
 public String index() {
 
@@ -72,10 +73,13 @@ public ModelAndView create(HttpServletRequest request,Annonce annonce) {
 @GetMapping("/create")
 public ModelAndView  getrefa() {
 	List<Annonce> annonce = annonceservice.findAll();
-	
+	List<Categorie> categorie = categorieservice.findAll();
     ModelAndView view = new ModelAndView("createannonce");
-   view.addObject("annonces",annonce);
+    view.addObject("annonces",annonce);
+    view.addObject("categories",categorie);
 	return view;
+	
+	
 }
 
 

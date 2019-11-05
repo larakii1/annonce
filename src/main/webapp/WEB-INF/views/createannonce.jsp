@@ -13,14 +13,14 @@
 <link rel="stylesheet" href="css/createannonce.css">
     <meta charset="UTF-8">
 
-    <title>createannonce</title>
+    <title>Le petit panda</title>
 
 </head>
 
 <body>
  
  
- <ul>
+ <ul class=list>
 
     <c:forEach items="${ annonces}" var="annonce">       
 
@@ -42,27 +42,36 @@
     </form>
 
 
-     <div class ="categorie">
-     <FORM>
-    <SELECT name="nom" size="1">
-    <OPTION>lundi
-    <OPTION>mardi
-    <OPTION>mercredi
-    <OPTION>jeudi
-    <OPTION>vendredi
-    </SELECT>
-    </FORM>
+
      
-     </div>
-
-    <ul>
- <c:forEach items="${ catégories}" var="cat">       
-
-        <li><c:out value="${cat.categorie}" /></p>
-
-    </c:forEach>
-    </ul>
     
+
+ <select>
+    
+  <option value="${cat.categorie}">abdel</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select> 
+ 
+
+
+<div class="box">
+
+
+  <select>
+ <c:forEach items="${categories}" var="cat">       
+ <option value="${cat.categorie}">${cat.categorie}</option> 
+ </c:forEach>
+  </select>
+
+
+
+</div>
+
+
+<div class="panda"></div>
+</body>
     
 
     <script src="/js/main.js"></script>
