@@ -1,28 +1,33 @@
 package com.example.demo;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Annonce {
-	int refAnnonce;
-	String annonceTitle; 
-	String categorie ;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	int refannonce;
+	
+	
+	String annoncetitle; 
+	
 	
 
-	public int getRefAnnonce() {
-		return refAnnonce;
+	public int getRefannonce() {
+		return refannonce;
 	}
-	public void setRefAnnonce(int refAnnonce) {
-		this.refAnnonce = refAnnonce;
+	public void setRefannonce(int refAnnonce) {
+		this.refannonce = refAnnonce;
 	}
-	public String getAnnonceTitle() {
-		return annonceTitle;
+	public String getAnnoncetitle() {
+		return annoncetitle;
 	}
-	public void setAnnonceTitle(String annonceTitle) {
-		this.annonceTitle = annonceTitle;
+	public void setAnnoncetitle(String annonceTitle) {
+		this.annoncetitle = annonceTitle;
 	}
-	public String getCategorie() {
-		return categorie;
-	}
-	public void setCategorie(String categorie) {
-		this.categorie = categorie;
-	}
+
 	
 }
