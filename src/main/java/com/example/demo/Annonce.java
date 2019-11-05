@@ -9,30 +9,25 @@ import javax.persistence.Id;
 public class Annonce {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int refAnnonce;
+	int refannonce;
 	
 	
-	String annonceTitle; 
-	String categorie ;
+	String annoncetitle; 
+	
 	
 
-	public int getRefAnnonce() {
-		return refAnnonce;
+	public int getRefannonce() {
+		return refannonce;
 	}
-	public void setRefAnnonce(int refAnnonce) {
-		this.refAnnonce = refAnnonce;
+	public void setRefannonce(int refAnnonce) {
+		this.refannonce = refAnnonce;
 	}
-	public String getAnnonceTitle() {
-		return annonceTitle;
+	public String getAnnoncetitle() {
+		return annoncetitle;
 	}
-	public void setAnnonceTitle(String annonceTitle) {
-		this.annonceTitle = annonceTitle;
+	public void setAnnoncetitle(String annonceTitle) {
+		this.annoncetitle = annonceTitle;
 	}
-	public String getCategorie() {
-		return categorie;
-	}
-	public void setCategorie(String categorie) {
-		this.categorie = categorie;
-	}
+
 	
 }
