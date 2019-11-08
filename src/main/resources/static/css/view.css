@@ -1,0 +1,67 @@
+
+body{
+	
+	 background: url("img/banbou.jpg")no-repeat ;
+	}
+	
+.title{
+	position:relative;
+	left:100px;
+	width:200px;
+	height:80px;
+	top:50px;
+	border-radius:4px;
+	background-color:#677f35;
+
+	}
+	
+.test{
+	width:200px;
+	height:80px;
+	background-color:red;
+	}
+.affiche{
+	width : 800px;
+	border:solid black;
+	height :700px;
+	background-color:black;
+	position:relative;
+	border-radius:1%;
+	margin:auto;	
+	top :100px;
+	opacity: 0.9;
+}
+
+.describe{
+  width: 70%;
+  height: 250px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #677f35;
+  font-size: 16px;
+  resize: none;
+ margin:auto;
+ word-wrap: break-word; 
+}
+
+.moov{
+	
+ position:relative;
+  top:200px;
+  	
+}
+
+.panda{
+		width: 100px;
+    height: 100px;
+    margin:auto;
+    border-radius:50px;
+    background: white;
+    border:solid black;
+    background: url("img/colr.png")no-repeat;
+    background-size:contain;
+postion:relative;
+	top:180px;
+}

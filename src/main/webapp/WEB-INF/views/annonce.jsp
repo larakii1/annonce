@@ -21,29 +21,50 @@
 
 <body>
 
+<div class="annonce">
 
-  
+
+</div>
+     
+<div class="panda"></div>
+<div class = moov>
+<ul id="menu-demo2">
+
+	<li><a href="#">Menu annonce</a>
+		<ul>
+			<li><a href="#">Trouver annonce</a></li>
+			<li><a href="#">Créer annonce </a></li>
+			<li><a href="#">Lien sous menu 4</a></li>
+			<li><a href="#">Lien sous menu 4</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
 
      
+<div class="login">
+<div class="id">
+<label for="inp" class="inp">
+  <input type="text" id="inp" placeholder="&nbsp;">
+  <span class="label">Identifiant</span>
+  <span class="border"></span>
+</label>
+<label for="inp" class="inp">
+  <input type="text" id="inp" placeholder="&nbsp;">
+  <span class="label">Mot de passe</span>
+  <span class="border"></span>
+</label>
+</div>
+</div>
 
-    <ul>
+   
+    
+    
+    
+    
+    
+    
 
-    <c:forEach items="${ annonces}" var="annonce">       
-
-        <li><c:out value="${ annonce.annoncetitle}" /></p>
-
-    </c:forEach>
-
-
-    </ul>
- 
-     <ul>
-    <c:forEach items="${ annonces}" var="annonce">       
-
-        <li><c:out value="${ annonce.categorie}" /></p>
-
-    </c:forEach>
-    </ul>
     
     <script src="/js/main.js"></script>
 

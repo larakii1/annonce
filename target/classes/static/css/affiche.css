@@ -1,0 +1,38 @@
+.affiche{
+	width : 800px;
+	border:solid black;
+	height :700px;
+	background-color:black;
+	position:relative;
+
+	border-radius:1%;
+	margin:auto;
+	
+}
+
+.title{
+	width:300px;
+    height:40px;
+    border:solid black;
+    background-color:white;
+    border-radius:3%;
+}
+.describe{
+		  width: 70%;
+  height: 330px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #677f35;
+  font-size: 16px;
+  resize: none;
+margin:auto;
+  position::relative;
+  top:170px;
+  
+}
+
+.lista{
+	  word-wrap: break-word;
+}

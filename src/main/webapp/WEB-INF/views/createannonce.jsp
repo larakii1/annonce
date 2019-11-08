@@ -18,61 +18,97 @@
 </head>
 
 <body>
- 
- 
- <ul class=list>
+ <!-- 
+ <div class="annonceliste">
+  <ul class=list>
 
     <c:forEach items="${ annonces}" var="annonce">       
 
      <li><c:out value="${ annonce.annoncetitle}" /></p>
-
+<li><c:out value="${ annonce.annoncedescribe}" /></p>
     </c:forEach>
     
     </ul>
-    
+</div>
+  -->
 
-    <form action="" method="post">
-
-    Title:
-
-    <input type="text" name="annoncetitle" placeholder="creer annonce" />
-
-    <input type="submit" value="ok" />
-
-    </form>
-
-
-
-     
-    
-
- <select>
-    
-  <option value="${cat.categorie}">abdel</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
-</select> 
  
 
 
-<div class="box">
+    
+
+<div class = moov>
+<ul id="menu-demo2">
+
+	<li><a href="#">Menu annonce</a>
+		<ul>
+			<li><a href="#">Trouver annonce</a></li>
+			<li><a href="#">Créer annonce </a></li>
+			<li><a href="#">Lien sous menu 4</a></li>
+			<li><a href="#">Lien sous menu 4</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
 
 
+
+
+
+
+
+
+<div class="panda"></div>
+
+<div class="login">
+<div class="id">
+
+<label for="inp" class="inp">
+  <input type="text" id="inp" placeholder="&nbsp;">
+  <span class="label">Identifiant</span>
+  <span class="border"></span>
+</label>
+<label for="inp" class="inp">
+  <input type="text" id="inp" placeholder="&nbsp;">
+  <span class="label">Mot de passe</span>
+  <span class="border"></span>
+</label>
+
+</div>
+
+</div>
+
+<div class="newannonce">
+<div class="haut">
+  <div class="box">
   <select>
  <c:forEach items="${categories}" var="cat">       
  <option value="${cat.categorie}">${cat.categorie}</option> 
  </c:forEach>
   </select>
-
-
-
 </div>
 
 
-<div class="panda"></div>
-</body>
+</div>
+   
+     
     
+<div class="post">
+
+   <form action="" method="post">
+
+    Title:
+
+    <input class = "title" type="text" name="annoncetitle" placeholder="titre" />
+       <div class="yo">
+     <textarea class="txt" type ="text" name = "annoncedescribe"></textarea>
+     </div>
+    <input type="submit" value="ok" />
+  
+    </form>
+</div>
+   </div>
+</body>
 
     <script src="/js/main.js"></script>
 
