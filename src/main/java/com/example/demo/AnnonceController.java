@@ -83,5 +83,30 @@ public ModelAndView  getrefa() {
 }
 
 
+@GetMapping("/affiche")
+public ModelAndView  getaffiche() {
+	List<Annonce> annonce = annonceservice.findAll();
+	List<Categorie> categorie = categorieservice.findAll();
+    ModelAndView view = new ModelAndView("affiche");
+    view.addObject("annonces",annonce);
+    view.addObject("categories",categorie);
+	return view;
+	
+	
+}
+
+@GetMapping("/detail/{refannonce}")
+public ModelAndView  getannonce(@PathVariable int refannonce) {
+	Annonce annonce = annonceservice.getAnnonce(refannonce);
+	List<Categorie> categorie = categorieservice.findAll();
+    ModelAndView view = new ModelAndView("view");
+    view.addObject("annonce",annonce);
+    view.addObject("categories",categorie);
+	return view;
+	
+	
+}
+
+
 
 }
