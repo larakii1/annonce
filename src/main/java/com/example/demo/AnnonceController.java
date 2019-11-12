@@ -7,6 +7,8 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -57,7 +59,6 @@ public ModelAndView  getref() {
 
 
 
-
 @PostMapping("/create")
 public ModelAndView create(HttpServletRequest request,Annonce annonce) {
 	request.getParameter("annoncetitle");
@@ -85,7 +86,8 @@ public ModelAndView  getrefa() {
 
 @GetMapping("/affiche")
 public ModelAndView  getaffiche() {
-	List<Annonce> annonce = annonceservice.findAll();
+	Pageable page = PageRequest.of(0, 3);
+	List<Annonce> annonce = annonceservice.page(page);
 	List<Categorie> categorie = categorieservice.findAll();
     ModelAndView view = new ModelAndView("affiche");
     view.addObject("annonces",annonce);
@@ -102,6 +104,21 @@ public ModelAndView  getannonce(@PathVariable int refannonce) {
     ModelAndView view = new ModelAndView("view");
     view.addObject("annonce",annonce);
     view.addObject("categories",categorie);
+	return view;
+	
+	
+}
+
+
+@GetMapping("/affiche/{page}")
+public ModelAndView  getaffiches(@PathVariable int page) {
+	Pageable pages = PageRequest.of(page, 2);
+	List<Annonce> annonce = annonceservice.page(pages);
+	List<Categorie> categorie = categorieservice.findAll();
+    ModelAndView view = new ModelAndView("affiche");
+    view.addObject("annonces",annonce);
+    view.addObject("categories",categorie);
+    view.addObject("pages",page);
 	return view;
 	
 	

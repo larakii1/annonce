@@ -3,6 +3,7 @@ package com.example.demo;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 
@@ -26,6 +27,10 @@ public void create(Annonce annonce) {
 	 annoncerepo.save(annonce);
 }
 
+public List<Annonce>page(Pageable pageable){
+	List<Annonce> affiche = annoncerepo.findAll(pageable).getContent();
+	return affiche ;
+}
 
 
 }

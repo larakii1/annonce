@@ -10,7 +10,7 @@
 <html lang="en">
 
 <head>
-<link rel="stylesheet" href="css/affiche.css">
+<link rel="stylesheet" href="/css/affiche.css">
     <meta charset="UTF-8">
 
     <title>LePetitPanda</title>
@@ -39,7 +39,16 @@
     </c:forEach>
     
     </ul>
+      
+     <a href="/affiche/${pages+1}">
+     <input type="submit" value="Suivant" name="button"/>
+     </a> 
+      <a href="/affiche/${pages-1}">
 
+<c:if test="${pages>0}">
+  <input type="submit" value="Précédant" name="button"/>
+</c:if>
+     </a> 
 </div>
     
     <script src="/js/main.js"></script>

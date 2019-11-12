@@ -18,13 +18,13 @@
 </head>
 
 <body>
+ 
 
 
 <div class="annonce">
 
 
 </div>
-     
 
 
 <div class="affiche">
@@ -41,7 +41,10 @@
 </div>
 </div>
 
+     
+<div class ="espace"> 
 
+</div>
 </body>
     
     <script src="/js/main.js"></script>

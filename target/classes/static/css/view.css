@@ -1,7 +1,8 @@
 
 body{
-	
+	margin:0;
 	 background: url("img/banbou.jpg")no-repeat ;
+	 background-size:cover;
 	}
 	
 .title{
@@ -42,19 +43,19 @@ body{
   background-color: #677f35;
   font-size: 16px;
   resize: none;
- margin:auto;
- word-wrap: break-word; 
+  margin:auto;
+  word-wrap: break-word; 
 }
 
 .moov{
 	
  position:relative;
-  top:200px;
+  top:150px;
   	
 }
 
 .panda{
-		width: 100px;
+    width: 100px;
     height: 100px;
     margin:auto;
     border-radius:50px;
@@ -62,6 +63,22 @@ body{
     border:solid black;
     background: url("img/colr.png")no-repeat;
     background-size:contain;
-postion:relative;
+    postion:relative;
 	top:180px;
 }
+
+
+.espace{
+	width:310px;
+	margin-left:auto;
+	height : cover;
+	border : solid black ; 
+	background-color:black;
+	position : relative;
+	bottom:710px;
+	height:100%;
+	
+
+}
+
+

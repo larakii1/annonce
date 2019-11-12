@@ -32,9 +32,9 @@
 
 	<li><a href="#">Menu annonce</a>
 		<ul>
-			<li><a href="#">Trouver annonce</a></li>
-			<li><a href="#">Créer annonce </a></li>
-			<li><a href="#">Lien sous menu 4</a></li>
+            <li> <a href="/affiche">Trouver annonce</a></li>
+			<li><a href="/create">Créer annonce </a></li>
+			<li><a href="#">Devenir membre</a></li>
 			<li><a href="#">Lien sous menu 4</a></li>
 		</ul>
 	</li>
