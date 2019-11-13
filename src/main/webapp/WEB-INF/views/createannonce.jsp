@@ -80,13 +80,6 @@
 
 <div class="newannonce">
 <div class="haut">
-  <div class="box">
-  <select>
- <c:forEach items="${categories}" var="cat">       
- <option value="${cat.categorie}">${cat.categorie}</option> 
- </c:forEach>
-  </select>
-</div>
 
 
 </div>
@@ -103,8 +96,16 @@
        <div class="yo">
      <textarea class="txt" type ="text" name = "annoncedescribe"></textarea>
      </div>
+
     <input type="submit" value="ok" />
-  
+         <div class="box">
+  <select name = "categorie">
+ <c:forEach items="${categories}" var="cat">       
+ <option value="${cat.id}">${cat.categorie}</option> 
+ </c:forEach>
+  </select>
+</div>
+     
     </form>
 </div>
    </div>

@@ -32,6 +32,10 @@
  <ul class=list>
     <c:out value="${ annonce.annoncetitle}" /></p>
 </div>
+<div class ="cate"> 
+   <c:out value="${ test.categorie}" /></p>
+</div>
+
 <div class="panda"></div>
 <div class="moov">
 <div class="describe">
