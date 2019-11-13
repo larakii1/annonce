@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Categorie {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-int id ;
+Integer id ;
 String categorie ;
 public int getid() {
 	return id;

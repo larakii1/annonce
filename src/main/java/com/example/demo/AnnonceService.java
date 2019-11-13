@@ -25,6 +25,7 @@ public List <Annonce> findAll(){
 
 public void create(Annonce annonce) {
 	 annoncerepo.save(annonce);
+	 
 }
 
 public List<Annonce>page(Pageable pageable){

@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.data.annotation.Transient;
+
 @Entity
 public class Annonce {
 	@Id
@@ -14,8 +16,16 @@ public class Annonce {
 	
 	String annoncetitle; 
 	String annoncedescribe ;
-	
+	@Transient
+	int categorie;
 
+
+	public int getCategorie() {
+		return categorie;
+	}
+	public void setCategorie(int categorie) {
+		this.categorie = categorie;
+	}
 	public String getAnnoncedescribe() {
 		return annoncedescribe;
 	}

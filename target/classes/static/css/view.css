@@ -81,4 +81,9 @@ body{
 
 }
 
-
+.cate{
+	width:100px;
+	height:50px;
+	border:solid black;
+	background-color:white;
+}

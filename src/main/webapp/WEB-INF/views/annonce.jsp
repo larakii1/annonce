@@ -11,7 +11,7 @@
 
 <html lang="en">
 
-<head>
+<head>slect fr
 <link rel="stylesheet" href="css/annonce.css">
     <meta charset="UTF-8">
 

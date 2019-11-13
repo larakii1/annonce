@@ -65,6 +65,7 @@ public ModelAndView create(HttpServletRequest request,Annonce annonce) {
 	  ModelAndView view = new ModelAndView("createannonce");
 //	    view.addObject("annonces",annonce);
 	  annonceservice.create(annonce);
+	  System.out.println(annonce.categorie);
 		return view;
 		
 }
@@ -98,12 +99,14 @@ public ModelAndView  getaffiche() {
 }
 
 @GetMapping("/detail/{refannonce}")
-public ModelAndView  getannonce(@PathVariable int refannonce) {
+public ModelAndView  getannonce(@PathVariable int refannonce ) {
 	Annonce annonce = annonceservice.getAnnonce(refannonce);
 	List<Categorie> categorie = categorieservice.findAll();
+	Categorie categories = categorieservice.getCategorie(annonce.categorie);
     ModelAndView view = new ModelAndView("view");
     view.addObject("annonce",annonce);
     view.addObject("categories",categorie);
+    view.addObject("test",categories);
 	return view;
 	
 	
