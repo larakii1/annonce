@@ -33,5 +33,9 @@ public List<Annonce>page(Pageable pageable){
 	return affiche ;
 }
 
+public List <Annonce>findAllBytitle (String search){
+	List<Annonce> searche = annoncerepo.findAllByAnnoncetitle(search);
+	return  searche;
+}
 
 }

@@ -17,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 
@@ -112,7 +113,6 @@ public ModelAndView  getannonce(@PathVariable int refannonce ) {
 	
 }
 
-
 @GetMapping("/affiche/{page}")
 public ModelAndView  getaffiches(@PathVariable int page) {
 	Pageable pages = PageRequest.of(page, 2);
@@ -127,6 +127,21 @@ public ModelAndView  getaffiches(@PathVariable int page) {
 	
 }
 
+@PostMapping("/affiche")
+public ModelAndView search(HttpServletRequest request) {
+	String search = request.getParameter("annoncetitle");
+	List <Annonce> annonce = annonceservice.findAllBytitle(search);
+	System.out.println(search);
+	  ModelAndView view = new ModelAndView("affiche");
+	  view.addObject("annonce" , annonce.get(0));
+	  
+		return view;
+		
+}
 
+
+{
+	
+}
 
 }

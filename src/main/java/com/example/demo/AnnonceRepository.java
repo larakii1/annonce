@@ -8,4 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AnnonceRepository extends JpaRepository <Annonce , Integer>  {
 Page<Annonce> findAll(Pageable page);
+List <Annonce> findAllByAnnoncetitle(String search);
+
 }

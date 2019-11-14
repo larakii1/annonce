@@ -42,3 +42,10 @@ margin:auto;
 .lista{
 	  word-wrap: break-word;
 }
+.titles{
+	width:300px;
+    height:40px;
+    border:solid black;
+    background-color:#4e9a06;
+    border-radius:6%;
+}

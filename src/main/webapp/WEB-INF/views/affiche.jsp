@@ -40,6 +40,14 @@
     
     </ul>
       
+      
+   <a href="/detail/${annonce.refannonce}">
+    <div class="titles">
+    
+    <c:out value="${ annonce.annoncetitle}" /></p>
+    </div>
+     </a> 
+     
      <a href="/affiche/${pages+1}">
      <input type="submit" value="Suivant" name="button"/>
      </a> 
@@ -49,7 +57,22 @@
   <input type="submit" value="Précédant" name="button"/>
 </c:if>
      </a> 
+     
+   <form action="/affiche" method="post">
+
+    Title:
+
+    <input class = "title" type="text" name="annoncetitle" placeholder="titre" />
+
+    <input type="submit" value="ok" />
+    
+     
+    </form>
 </div>
+
+
+
+
     
     <script src="/js/main.js"></script>
 
