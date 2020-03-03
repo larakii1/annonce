@@ -31,11 +31,17 @@
  <ul class=list>
 
     <c:forEach items="${annonces}" var="annonce"> 
-     <a href="/detail/${annonce.refannonce}">
+    <form action="affiche" method="post">
+    <a href="/detail/${annonce.refannonce}">
+   
+   <input type ="hidden" name="id" value="${annonce.refannonce}"/>
+     
     <div class="title">
     <c:out value="${ annonce.annoncetitle}" /></p>
     </div>
      </a> 
+      <input type="submit" name="id" value="delete"/>
+      </form>
     </c:forEach>
     
     </ul>

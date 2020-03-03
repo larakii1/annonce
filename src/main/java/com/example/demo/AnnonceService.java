@@ -27,6 +27,12 @@ public void create(Annonce annonce) {
 	 annoncerepo.save(annonce);
 	 
 }
+public void delete(String id) {
+	Annonce deleteannonce=annoncerepo.findById(Integer.parseInt(id)).get();
+	 annoncerepo.delete(deleteannonce);
+	 
+}
+
 
 public List<Annonce>page(Pageable pageable){
 	List<Annonce> affiche = annoncerepo.findAll(pageable).getContent();

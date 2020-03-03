@@ -59,6 +59,19 @@ public ModelAndView  getref() {
 
 
 
+@PostMapping("/affiche")
+public ModelAndView delete(HttpServletRequest request) {
+	String id =request.getParameter("id");
+	  ModelAndView view = new ModelAndView("affiche");
+//	    view.addObject("annonces",annonce);
+	  annonceservice.delete(id);
+	  System.out.println(id);
+
+	
+		return view;
+		
+}
+
 @PostMapping("/create")
 public ModelAndView create(HttpServletRequest request,Annonce annonce) {
 	request.getParameter("annoncetitle");
@@ -69,6 +82,7 @@ public ModelAndView create(HttpServletRequest request,Annonce annonce) {
 		return view;
 		
 }
+
 
 
 
@@ -84,6 +98,17 @@ public ModelAndView  getrefa() {
 	
 }
 
+@GetMapping("/delete")
+public ModelAndView  delete() {
+	List<Annonce> annonce = annonceservice.findAll();
+	List<Categorie> categorie = categorieservice.findAll();
+    ModelAndView view = new ModelAndView("annonce");
+    view.addObject("annonces",annonce);
+    view.addObject("categories",categorie);
+	return view;
+	
+	
+}
 
 @GetMapping("/affiche")
 public ModelAndView  getaffiche() {
